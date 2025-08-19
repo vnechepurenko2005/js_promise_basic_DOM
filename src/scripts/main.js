@@ -13,10 +13,10 @@ const promise2 = new Promise((resolve, reject) => {
 
 promise1
   .then(() => showMessage('Promise was resolved!', 'message'))
-  .catch(() => 'Promise was rejected!');
+  .catch(() => showMessage('Promise was rejected!', 'message error-message'));
 
 promise2
-  .then(() => 'Promise was resolved!')
+  .then(() => showMessage('Promise was resolved!', 'message'))
   .catch(() => {
     showMessage('Promise was rejected!', 'message error-message');
   });
